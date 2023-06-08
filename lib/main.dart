@@ -1,4 +1,6 @@
 import 'package:android_classa/auth_system/login_screen.dart';
+import 'package:android_classa/basic_widget_app/bottom_navigation.dart';
+import 'package:android_classa/general_screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +17,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/splash': (context) => const SplashScreen(),
+      },
+      home: const BottomNavigationWidget(),
     );
   }
 }

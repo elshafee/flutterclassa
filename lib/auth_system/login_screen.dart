@@ -1,4 +1,7 @@
+import 'package:android_classa/auth_system/signup_screen.dart';
+import 'package:android_classa/general_screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:transition/transition.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -42,35 +45,34 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             InkWell(
               onTap: () {
-                print("Hello");
+                Navigator.push(
+                    context,
+                    Transition(
+                        child: const SignUpScreen(),
+                        transitionEffect: TransitionEffect.FADE));
               },
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.9,
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(color: Colors.deepPurple),
-                ),
-                child: const Center(
-                    child: Text(
-                  "Login",
-                  style: TextStyle(fontSize: 18, color: Colors.deepPurple),
-                )),
-              ),
+              child: const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Text("Don't have account? SignUp here")),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-                onPressed: () {
-                  print("Hello");
-                },
-                child: Text("Login"))
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    Transition(
+                        child: const HomeScreen(),
+                        transitionEffect: TransitionEffect.FADE));
+              },
+              child: const Text("Login"),
+            )
           ],
         ),
       ),

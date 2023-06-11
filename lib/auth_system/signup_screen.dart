@@ -1,80 +1,119 @@
-import 'package:android_classa/auth_system/login_screen.dart';
-import 'package:android_classa/general_screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_classb/auth_system/login_screen.dart';
+import 'package:flutter_classb/home_screen/home_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:transition/transition.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/dashatars.png',
-              height: 180,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 10),
-              child: TextFormField(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'assets/dashatars.png',
+                height: 190,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextFormField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  label: const Text("Name"),
+                  prefix: const Padding(
+                    padding: EdgeInsets.only(right: 15),
+                    child: Icon(
+                      Icons.email,
+                    ),
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
+                  label: const Text("Name"),
                 ),
               ),
-            ),
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  label: const Text("Email Adress"),
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  prefix: const Padding(
+                    padding: EdgeInsets.only(right: 15),
+                    child: Icon(
+                      Icons.email,
+                    ),
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10))),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: TextFormField(
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  label: const Text("Email Address"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Icon(
+                        Icons.password,
+                      ),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
+                      horizontal: 20,
+                      vertical: 10,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     label: const Text("Password"),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
+                  ),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: TextFormField(
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Icon(
+                        Icons.password,
+                      ),
+                    ),
                     contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
-                    label: const Text("confirm Password"),
+                      horizontal: 20,
+                      vertical: 10,
+                    ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    label: const Text("Confirmation Password"),
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            InkWell(
+              InkWell(
                 onTap: () {
                   Navigator.push(
                       context,
@@ -82,20 +121,53 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           child: const LoginScreen(),
                           transitionEffect: TransitionEffect.FADE));
                 },
-                child: const Text("Already have an account? Login here")),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      Transition(
-                          child: const HomeScreen(),
-                          transitionEffect: TransitionEffect.FADE));
-                },
-                child: const Text("Sign Up"))
-          ],
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: 10,
+                  ),
+                  child: Text(
+                    "Have an account? Login here",
+                    style: GoogleFonts.lobster(),
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        Transition(
+                            child: const HomeScreen(),
+                            transitionEffect: TransitionEffect.FADE));
+                  },
+                  child: Text(
+                    "SignUp",
+                    style: GoogleFonts.lobster(
+                      fontSize: 24,
+                    ),
+                  )),
+              // InkWell(
+              //   onTap: () {
+              //     print("Hello");
+              //   },
+              //   child: Center(
+              //     child: Container(
+              //       width: MediaQuery.of(context).size.width * 0.8,
+              //       height: 30,
+              //       decoration: BoxDecoration(
+              //         color: Colors.deepPurple,
+              //         borderRadius: BorderRadius.circular(12),
+              //       ),
+              //       child: const Center(
+              //         child: Text(
+              //           "Login",
+              //           style: TextStyle(color: Colors.white),
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // )
+            ],
+          ),
         ),
       ),
     );

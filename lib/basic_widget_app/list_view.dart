@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ListViewExample extends StatefulWidget {
   const ListViewExample({super.key});
@@ -12,186 +11,187 @@ class _ListViewExampleState extends State<ListViewExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("ListView Example"),
-        backgroundColor: Colors.deepPurple[200],
-      ),
       body: ListView(
         children: [
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer Ahmed"),
+            title: Text("Abdelrahman"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
+          ),
+          ListTile(
+            title: Text("Afrah"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
             onTap: () {},
-            splashColor: Colors.purple[50],
-            leading: Icon(Icons.person),
-            title: Text("Abdualziz"),
+            splashColor: Colors.deepPurple[50],
+            title: Text("Aya"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Ischack", style: GoogleFonts.kalam()),
-          ),
-          Divider(
-            thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Karim "),
+          const ListTile(
+            title: Text("Chiraz"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
+            title: Text("Fedi"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
+          ),
+          ListTile(
+            title: Text("Lamia"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
+          ),
+          ListTile(
             title: Text("Mohamed"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Rand "),
+            title: Text("Salime"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Sultan  "),
+            title: Text("Sarra"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer  "),
+            title: Text("Wael"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Abdullah  "),
+            title: Text("Rowan"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer Ahmed"),
+            title: Text("Abdelrahman"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Abdualziz"),
+            title: Text("Afrah"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Ischack"),
+            onTap: () {},
+            splashColor: Colors.deepPurple[50],
+            title: Text("Aya"),
           ),
           Divider(
             thickness: 2,
-            indent: MediaQuery.of(context).size.width * 0.2,
-            endIndent: MediaQuery.of(context).size.width * 0.2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
+          ),
+          const ListTile(
+            title: Text("Chiraz"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text(
-              "Karim ",
-              style: GoogleFonts.indieFlower(
-                fontSize: 40,
-              ),
-            ),
+            title: Text("Fedi"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
+            title: Text("Lamia"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
+          ),
+          ListTile(
             title: Text("Mohamed"),
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Rand "),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Sultan  "),
+            title: Text("Salime"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer  "),
+            title: Text("Sarra"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Abdullah  "),
+            title: Text("Wael"),
+          ),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer Ahmed"),
+            title: Text("Rowan"),
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Abdualziz"),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Ischack"),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Karim "),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Mohamed"),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Rand "),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Sultan  "),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Anwer  "),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text("Abdullah  "),
+          Divider(
+            thickness: 2,
+            indent: MediaQuery.of(context).size.width * 0.25,
+            endIndent: MediaQuery.of(context).size.width * 0.25,
           ),
         ],
       ),

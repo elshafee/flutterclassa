@@ -1,6 +1,6 @@
 {
-    "name": "android_classa",
-    "short_name": "android_classa",
+    "name": "flutter_classb",
+    "short_name": "flutter_classb",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

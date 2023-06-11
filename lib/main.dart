@@ -1,7 +1,6 @@
-import 'package:android_classa/auth_system/login_screen.dart';
-import 'package:android_classa/basic_widget_app/bottom_navigation.dart';
-import 'package:android_classa/general_screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_classb/auth_system/login_screen.dart';
+import 'package:flutter_classb/general_screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +8,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/login': (context) => const LoginScreen(),
-        '/splash': (context) => const SplashScreen(),
+        '/splash': (context) => const SplashScreen()
       },
-      home: const BottomNavigationWidget(),
+      debugShowCheckedModeBanner: false,
+      home: const SplashScreen(),
     );
   }
 }

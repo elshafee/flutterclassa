@@ -1,5 +1,6 @@
-import 'package:android_classa/utils/drawer_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_classb/utills/drawer_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       drawer: const Drawe(),
       appBar: AppBar(
-        title: const Text("Home Screen"),
+        title: Text(
+          "Home Screen with flutter",
+          style: GoogleFonts.lobster(
+            fontSize: 20,
+            fontWeight: FontWeight.normal,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
         centerTitle: true,
       ),
     );

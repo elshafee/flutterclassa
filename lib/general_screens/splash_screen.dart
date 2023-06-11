@@ -1,5 +1,5 @@
-import 'package:android_classa/auth_system/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_classb/auth_wraper.dart';
 import 'package:transition/transition.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.push(
           context,
           Transition(
-              child: const LoginScreen(),
+              child: const AuthWrapper(),
               transitionEffect: TransitionEffect.FADE));
     });
   }
@@ -27,14 +27,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: <Widget>[
           Center(
             child: Image.asset('assets/dashatars.png'),
           ),
           const SizedBox(
-            height: 100,
+            height: 300,
           ),
-          CircularProgressIndicator()
+          const CircularProgressIndicator(),
         ],
       ),
     );
